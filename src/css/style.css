@@ -186,6 +186,7 @@ a:hover {
 .icon{
   height: 20px;
   width: 20px;
+
 }
 #global-nav-toggle{
   align-items: center;
@@ -259,8 +260,7 @@ section a{
   align-self: center;
   font-size: .8em;
   margin: 10px;
-  opacity: 1;
-  z-index: 5;
+
 }
 .hero-banner__content{
   grid-row: 3;
@@ -274,4 +274,61 @@ section a{
 }
 .disclaimer{
   font-size: .7em;
+}
+use{
+  color: white;
+}
+
+
+.info{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.media-card{
+  grid-row: 1;
+  padding: 5px;
+  margin: 10px;
+}
+.media h3{
+  color: #000;
+}
+.media h3:hover{
+  color: var(--bs-crete);
+}
+.intro{
+  padding: 10px;
+  font-family: var(--bs-font-serif);
+}
+
+.media-card p{
+  font-size: .8em;
+}
+footer{
+  background-image: url(https://byui-cse.github.io/wdd231-course/images/topo_pattern.png);
+}
+.contact{
+  padding: 20px;
+}
+.contact p{
+  margin: 8px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+h4{
+  margin-bottom: 10px;
+}
+
+
+
+@media (max-width: 500px) {
+  .info {
+    grid-template-columns: 1fr;
+    grid-row: 1fr 1fr 1fr;
+    
+  }
+  .media-card{
+    grid-row: inherit;
+  }
+  
 }

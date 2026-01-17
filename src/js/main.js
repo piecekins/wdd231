@@ -1,25 +1,30 @@
-import { getParkData } from "./parkService.mjs";
+import { getParkData, parkInfoLinks } from "./parkService.mjs";
+import { mediaCardTemplate } from "./templates.mjs";
+import {setHeaderFooter} from "./setHeaderFooter.mjs"
 
 const parkData = getParkData();
 
-const discaimer = document.querySelector(".disclaimer > a")
-discaimer.href = parkData.url;
-discaimer.innerHTML = parkData.fullName;
 
-const title = document.querySelector("title");
 
-title.innerHTML = parkData.fullName;
-
-const parkInfo = document.querySelector(".hero-banner__content")
-
-function parkInfoTemplate(info){
-    return `<a href="#" class="hero-banner__title">Yellowstone</a>
-              <p class="hero-banner__subtitle">
-                <span>${info.designation}</span>
-                <span>${info.states}</span>
-              </p>`
+function setParkIntro(data){
+  const intro = document.querySelector(".intro");
+  intro.innerHTML = `<h1>${data.fullName}</h1>
+                    <p>${data.description}</p>`
+                
 }
-parkInfo.innerHTML = parkInfoTemplate(parkData);
+function setParkInfo(data){
+  /* added info.innerHTML = html.join(""); after i looked and updated it to have html const*/
+  const info = document.querySelector(".info")
+  const html = data.map(mediaCardTemplate)
+  info.innerHTML = html.join("");
+}
 
-const heroImg = document.querySelector(".hero-banner > img")
-heroImg.src = parkData.images[0].url;
+
+
+
+setHeaderFooter(parkData)
+setParkIntro(parkData)
+setParkInfo(parkInfoLinks)
+
+
+
