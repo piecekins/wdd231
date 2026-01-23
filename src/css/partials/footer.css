@@ -1,0 +1,14 @@
+footer{
+  background-image: url(https://byui-cse.github.io/wdd231-course/images/topo_pattern.png);
+}
+.contact{
+  padding: 20px;
+}
+.contact p{
+  margin: 8px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+h4{
+  margin-bottom: 10px;
+}
