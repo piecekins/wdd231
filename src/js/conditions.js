@@ -18,7 +18,7 @@ function setAlerts(data){
 function setCenters(data){
   /* added info.innerHTML = html.join(""); after i looked and updated it to have html const*/
   const info = document.querySelector(".serviceList")
-  console.log(data)
+  
   const html = data.map(centerTemplate)
   
   info.innerHTML = html.join("");
