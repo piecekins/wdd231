@@ -1,3 +1,30 @@
+import spritePath from '../images/sprite.symbol.svg';
+
+export function alertTemplate(info){
+  let id = info.category;
+  if (info.category === "park closure"){
+    return `<div class="alertCards">
+                <svg class="icon alert-closure" focusable="false" aria-hidden="true">
+                  <use xlink:href="${spritePath}#alert-closure"></use>
+                </svg>
+                <div>
+                  <h4 class="alert-closure" >${info.title}</h4>
+                  <p>${info.description}</p>
+                </div>
+            </div>`
+  }
+  else{
+    return `<div class="alertCards">
+                <svg class="icon alert-${id.toLowerCase()}" focusable="false" aria-hidden="true"><use xlink:href="${spritePath}#alert-${id.toLowerCase()}"></use></svg>
+                <div>
+                  <h4 class="alert-${id.toLowerCase()}">${info.title}</h4>
+                  <p>${info.description}</p>
+                </div>
+            </div>`
+  }
+
+
+}
 
 export function footerTemplate(data){
   const mailing = getMailingAddress(data.addresses)
@@ -42,3 +69,24 @@ export  function parkInfoTemplate(info){
                   <span>${info.states}</span>
                 </p>`
   }
+
+
+
+
+export  function centerTemplate(info){
+      return `<div>
+          <p class="name">${info.name}</p>
+          <p>${info.description}</p>
+          <p>${info.directionsInfo}</p>
+        </div>`
+  }
+
+  export  function activitiesTemplate(info){
+      return `<li>${info.name}</li>`
+  }
+
+
+
+  
+
+

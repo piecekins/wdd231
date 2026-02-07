@@ -1,0 +1,60 @@
+.alertCards{
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+}
+
+.alertCards div{
+    padding: 20px;
+    margin: 0;
+}
+
+.alertCards div p, h4{
+    margin: 0px;
+}
+
+.alertCards .icon{
+    min-width: 50px;
+    align-self: baseline;
+    margin-top: 25px;
+}
+#conditions{
+    padding: 40px;
+}
+
+#conditions h1{
+    
+    font-family: var(--bs-font-serif);
+}
+
+
+
+.name{
+    font-weight: bold;
+}
+
+.centers{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.centers div{
+    margin: 20px;
+    border-bottom: 1px solid;
+    border-width: 1px;
+    border-color: var(--bs-grey-6);
+    
+    
+}
+
+
+
+.activity li{
+    display: list-item;
+    min-width: 250px;
+    text-align: left;
+    
+}
+

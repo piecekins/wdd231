@@ -19,10 +19,18 @@ async function getjson(url) {
   return data
 }
 
-export async function getVisitorCenterData(){
-  const parkData = await getjson("visitorcenters?parkCode=yell")
-  return parkData.data[0];
+export async function getAlertData() {
+  const parkData = await getjson("alerts?parkCode=bibe")
+  
+  return parkData.data;
 }
+
+export async function getVisitorCenterData(){
+  const parkData = await getjson("visitorcenters?parkCode=bibe")
+  
+  return parkData.data;
+}
+
 export async function getParkData(){
    const parkData = await getjson("parks?parkCode=bibe")
   return parkData.data[0];
