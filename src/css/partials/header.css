@@ -21,16 +21,21 @@
 /* Headers */
 
 .global-header{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr;
   background-color: #000;
-  max-height: 50px;
-  justify-content: space-between;
+  max-height: 5000px;
+  
   fill: white;
   
 }
 .global-header__right{
+  grid-column: 3;
   display: flex;
+  justify-content: right;
   align-items: center;
+  
 
 
 }
@@ -57,6 +62,82 @@
   border-style: none none none solid;
   
 }
+
+
+
+.global-nav{
+  grid-row: 2;
+  grid-column: 1/4;
+  z-index: 5;
+  width: 100%;
+  border-top: 1px solid #333;
+  max-height: 0;
+  overflow: hidden;
+  
+  color: white;
+
+  padding: 15px;
+  transition: all 0.5s;
+  
+
+}
+
+.global-nav svg{
+  --icon-color: white;
+}
+
+.global-nav a {
+  color: white;
+  display: list-item;
+}
+
+
+.global-nav__toggle--open{
+  display: none;
+  align-items: center;
+}
+
+.global-nav__toggle--closed{
+  display: flex;
+  align-items: center;
+}
+
+
+.global-nav.show{
+  max-height: 1000px;
+}
+
+.global-nav__toggle[aria-expanded="true"] > .global-nav__toggle--open {
+  display: flex;
+}
+.global-nav__toggle[aria-expanded="true"] > .global-nav__toggle--closed {
+  display: none;
+}
+
+.global-nav__list{
+  justify-self: left;
+  width: 300px;
+  
+}
+.global-nav__split-button{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.global-nav__split-button a{
+  
+  width: 200px;
+  text-align: left;
+}
+
+.global-nav__split-button__toggle{
+  background-color: black;
+  border: none;
+  
+  
+}
+
 
 nav ul{
   padding: 10px;
