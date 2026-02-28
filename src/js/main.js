@@ -27,7 +27,7 @@ async function init() {
   setHeaderFooter(parkData)
   setParkIntro(parkData)
   setParkInfo(getInfoLinks(parkData))
-  enableNavigation()
+  
 }
 
 
@@ -61,5 +61,6 @@ function enableNavigation() {
 }
 
 init()
+enableNavigation()
 
 
