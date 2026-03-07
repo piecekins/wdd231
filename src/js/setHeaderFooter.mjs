@@ -1,4 +1,5 @@
 import { footerTemplate, parkInfoTemplate } from "./templates.mjs";
+import {enableNavigation, subNavigation} from "./navigation.mjs"
 
 
 function setParkFooter(data){
@@ -9,7 +10,7 @@ function setParkFooter(data){
   footer.innerHTML = footerTemplate(data)
 }
 
-function setHeaderInfo(parkData){
+ function setHeaderInfo(parkData){
   const discaimer = document.querySelector(".disclaimer > a")
   discaimer.href = parkData.url;
   discaimer.innerHTML = parkData.fullName;
@@ -30,4 +31,7 @@ function setHeaderInfo(parkData){
 export function setHeaderFooter(parkData){
     setHeaderInfo(parkData)
     setParkFooter(parkData)
+    enableNavigation()
+    subNavigation()
 }
+

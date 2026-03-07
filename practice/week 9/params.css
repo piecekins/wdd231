@@ -1,0 +1,61 @@
+body {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+}
+.logoImg {
+  border-radius: 50% 25%;
+  width: 50px;
+  height: 50px;
+  background-color: coral;
+  justify-content: center;
+    align-self: center;
+}
+
+header a{
+    display: flex;
+    
+}
+header{
+    border-bottom: 1px solid coral;
+}
+
+header a h1 {
+    color: black;
+    text-decoration-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.product{
+    padding: 10px;
+    border: 2px solid black;
+    display: flex;
+    
+    flex-direction: row;
+    
+}
+
+.product p{
+    margin: 10px;
+}
+
+.product h3{
+    background-color: gray;
+    padding: 0px;
+    margin: 10px;
+    width: 100px;
+}
+
+
+@media (max-width: 500px) {
+  .product{
+    
+    max-width: 325px;
+    flex-direction: column;
+    
+}
+  
+}
