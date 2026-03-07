@@ -42,8 +42,8 @@
       </ul>
     </div>
     
-    <header>
-     <section class="global-header">
+        <header>
+      <section class="global-header">
         <a href="index.html" class="site-title"
           ><span class="logo" role="presentation"></span>
           <span>National Park Service</span></a
@@ -76,10 +76,30 @@
         <nav class="global-nav">
           <h2 class="global-nav__section-heading">Explore this Park</h2>
           <ul class="global-nav__list">
+          <li>
+              <div class="global-nav__split-button">
+              <a href="#">Plan Your Visit</a>
+              <button class="global-nav__split-button__toggle">
+                  <span class="visually-hidden"
+                  >Toggle submenu for Plan Your Visit</span
+                  >
+                  <svg class="icon" role="presentation" focusable="false">
+                  <use
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="/images/sprite.symbol.svg#arrow"
+                  ></use>
+                  </svg>
+              </button>
+              </div>
+          </li>
+          </ul>
+          <h2 class="global-nav__section-heading">Explore the National Park Service</h2>
+          <ul class="global-nav__list">
             <li>
+            
               <div class="global-nav__split-button">
                 <a href="#">Plan Your Visit</a>
-                <button class="global-nav__split-button__toggle">
+                <button class="global-nav__split-button__toggle" id="plan">
                   <span class="visually-hidden"
                     >Toggle submenu for Plan Your Visit</span
                   >
@@ -87,8 +107,17 @@
                     <use xlink:href="/images/sprite.symbol.svg#arrow"></use>
                   </svg>
                 </button>
+                
+              </div>
+              <ul class="links" aria-label="Plan Your Visit Submenu">
+                <li><a href="#">Find a park</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Passes</a></li>
+                <li><a href="#">Trip Ideas</a></li>
+              </ul>
+              <div class="global-nav__split-button">
                 <a href="#">Learn About the Park</a>
-                <button class="global-nav__split-button__toggle">
+                <button class="global-nav__split-button__toggle" id="learn">
                   <span class="visually-hidden"
                     >Toggle submenu for Learn About the Park</span
                   >
@@ -96,20 +125,39 @@
                     <use xlink:href="/images/sprite.symbol.svg#arrow"></use>
                   </svg>
                 </button>
+                
+              </div>
+              <ul class="links" aria-label="Learn About the Park">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Discover History</a></li>
+                <li><a href="#">Explore Nature</a></li>
+                <li><a href="#">Kids</a></li>
+              </ul>
+              <div class="global-nav__split-button">
                 <a href="#">Get Involved</a>
-                <button class="global-nav__split-button__toggle">
+                <button class="global-nav__split-button__toggle" id="involved">
                   <span class="visually-hidden"
                     >Toggle submenu for Get Involved</span
                   >
                   <svg class="icon" role="presentation" focusable="false">
                     <use xlink:href="/images/sprite.symbol.svg#arrow"></use>
                   </svg>
+                  
                 </button>
+                  
               </div>
+              <ul class="links" aria-label="Get Involved">
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Volunteer</a></li>
+                <li><a href="#">Work for Us</a></li>
+              </ul>
             </li>
           </ul>
         </nav>
       </section>
+
+      
       
 
       
@@ -138,7 +186,7 @@
         <!-- I didn't put them in nav, ul, and <li>s and I wasn't sure the svg# codes for them all-->
         <nav>
           <ul>
-            <li>
+            <li class="apps">
                 <a href="conditions.html">
                 <span>Info</span>
                 <svg class="icon" role="presentation" focusable="false">
@@ -146,7 +194,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="apps">
               <a href="conditions.html">
                 <span>Alerts</span>
                 <svg class="icon" role="presentation" focusable="false">
@@ -154,7 +202,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="apps">
               <a href="#">
                 <span>Maps</span>
                 <svg class="icon" role="presentation" focusable="false">
@@ -162,7 +210,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="apps">
                 <a href="#">
                   <span>Calender</span>
                   <svg class="icon" role="presentation" focusable="false">
@@ -170,7 +218,7 @@
                   </svg>
                 </a>
             </li>
-            <li>
+            <li class="apps">
               <a href="#">
                 <span>Fees</span>
                 <svg class="icon" role="presentation" focusable="false">
