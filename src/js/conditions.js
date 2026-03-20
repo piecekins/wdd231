@@ -4,7 +4,7 @@ import { alertTemplate, centerTemplate, activitiesTemplate } from "./templates.m
 
 
 import "../css/style.css";
-import "../css/conditions.css";
+import "../css/condition.css";
 
 function setAlerts(data){
   /* added info.innerHTML = html.join(""); after i looked and updated it to have html const*/
