@@ -1,0 +1,57 @@
+/* badUx.css */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: pink;
+  
+  color: black;
+  font-size: 1.2em;
+  padding: 20px;
+}
+
+h1 {
+  color: green;
+  text-align: center;
+  font-size: 2em;
+}
+
+h2 {
+  color: green;
+  text-align: center;
+  font-size: 1em;
+}
+img {
+  width: 300px;
+  height: 400px;
+}
+
+form {
+  background-color: white;
+}
+ul {
+  list-style-type: none;
+  padding: 10px;
+  background-color: gray;
+  width: 200px;
+  border: 2px solid black;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+form {
+
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 10px;
+  background-color: pink;
+  justify-content: center;
+}
+
+form button{
+    width: 100px;
+    text-align: center;
+    
+}
