@@ -72,17 +72,100 @@ export  function parkInfoTemplate(info){
 
 
 export  function centerTemplate(info){
-      return `<div>
-          <p class="name">${info.name}</p>
+
+      return `<li class="visitor-center">
+          <h4><a href="visitor-center.html?id=${info.id}">${info.name}</a></h4>
           <p>${info.description}</p>
           <p>${info.directionsInfo}</p>
-        </div>`
+          </li>`
   }
 
   export  function activitiesTemplate(info){
       return `<li>${info.name}</li>`
   }
 
+
+
+
+
+
+export function listTemplate(data, contentTemplate){
+  const html = data.map(contentTemplate)
+  return `<ul>${html.join("")}</ul>`; 
+}
+
+export function vcImageTemplate(data){
+  return `<li><img src="${data.url}" alt="${data.altText}" ><li>`;
+}
+
+export function vcAmenityTemplate(data){
+  return `<li>${data}</li>`;
+}
+
+export function vcDirectionsTemplate(data){
+  return `<p>${data.directionsInfo}</p>`;
+}
+
+export function vcAddressTemplate(data){
+  return `<h3>Physical Address</h3>
+              <address>
+                ${data.addresses[0].line1}<br />
+                ${data.addresses[0].city}, ${data.addresses[0].stateCode} ${data.addresses[1].postalCode}
+              </address>
+              <h3>Mailing address</h3>
+              <address>
+                ${data.addresses[1].line1}<br />
+                ${data.addresses[1].city}, ${data.addresses[1].stateCode} ${data.addresses[1].postalCode}
+              
+              </address>`;
+}
+
+export function vcContectTemplate(data){
+  return `<section class="vc-contact__email">
+              <h3>Email Address</h3>
+              <a href="email:${data.contacts.emailAddresses[0].emailAddresses}">Send this visitor center an email</a>
+              </section>
+              <section class="vc-contact__phone">
+              <h3>Phone numbers</h3>
+              <a href="tel:+${data.contacts.phoneNumbers[0].phoneNumber}">${data.contacts.phoneNumbers[0].phoneNumber}</a>
+                `;
+}
+
+
+
+
+
+export function detailsTemplate(id, icon, summary, content){
+  return `<details class="centers" name="${id}">
+            <summary>
+              
+                <svg class="icon" role="presentation" focusable="false">
+                  <use xlink:href="/images/sprite.symbol.svg#${icon}"></use>
+                </svg>
+                ${summary}
+            </summary>
+            
+            <section class="id">
+              ${content}
+            </section>
+        </details>
+      </section>`
+}
+
+
+export function mainHeaderTemplate(data){
+  return `<h1>
+            <svg class="icon" role="presentation" focusable="false">
+            <use xlink:href="/images/sprite.symbol.svg#ranger-station"></use>
+            </svg>
+            ${data.name}
+          </h1>`;
+}
+
+export function visitorImageTemplate(data){
+  return `<img src="${data.images[0].url}" alt="${data.images[0].altText}">
+        <p>${data.images[0].caption}</p>`
+}
 
 
   
