@@ -149,7 +149,7 @@ export function detailsTemplate(id, icon, summary, content){
               ${content}
             </section>
         </details>
-      </section>`
+      `
 }
 
 

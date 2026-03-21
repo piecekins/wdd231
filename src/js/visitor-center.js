@@ -12,16 +12,8 @@ function getParam(param) {
     return center
 }
 
-
-async function init() {
-   const parkData = await getParkData();
-   setHeaderFooter(parkData) 
-   const centerId = getParam("id")
-   const centerDetails = await getParkVisitorCenterDetails(centerId)
-    console.log(document.querySelector('.gallery'))
-   console.log(centerDetails)
-
-   const galleryHTML = listTemplate(centerDetails.images, vcImageTemplate)
+function buildHtml(centerDetails){
+    const galleryHTML = listTemplate(centerDetails.images, vcImageTemplate)
    document.querySelector('.gallery').insertAdjacentHTML("beforeend", galleryHTML);
 
    const AmenityHTML = detailsTemplate("amenities", "heading-icon_info", "AMENITIES", listTemplate(centerDetails.amenities, vcAmenityTemplate))
@@ -44,6 +36,16 @@ async function init() {
 
    
    document.querySelector('.info').innerHTML = centerDetails.description
+}
+
+async function init() {
+   const parkData = await getParkData();
+   setHeaderFooter(parkData) 
+   const centerId = getParam("id")
+   const centerDetails = await getParkVisitorCenterDetails(centerId)
+    
+    buildHtml(centerDetails)
+   
 ;
  
  }
